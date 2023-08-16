@@ -12,7 +12,6 @@ public class Quad extends Shape implements HasPerimeter {
     public int side4;
 
     public Quad(int side1, int side2, int side3, int side4) {
-        super(name);
         if (side1 == 0 || side2 == 0 || side3 == 0 || side4 == 0) {
             throw new IllegalArgumentException(String.format("Чотирикутника зі сторонами %s, %s, %s і %s не існує!", side1, side2, side3, side4));
         }
@@ -30,5 +29,10 @@ public class Quad extends Shape implements HasPerimeter {
     @Override
     public double getPerimeter() {
         return side1 + side2 + side3 + side4;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

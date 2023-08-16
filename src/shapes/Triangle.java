@@ -11,7 +11,6 @@ public class Triangle extends Shape implements HasPerimeter, HasArea, HasSymbol 
     public int side3;
 
     public Triangle(int side1, int side2, int side3) {
-        super(name);
         sideValidate(side1, side2, side3);
         this.side1 = side1;
         this.side2 = side2;
@@ -85,5 +84,10 @@ public class Triangle extends Shape implements HasPerimeter, HasArea, HasSymbol 
     @Override
     public char getSymbol() {
         return symbol;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

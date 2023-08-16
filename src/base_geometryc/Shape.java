@@ -3,26 +3,16 @@ package base_geometryc;
 import shape_functionality.Color;
 
 public abstract class Shape {
-    private String name;
-
     private Color color = Color.DEFOULT_COLOR;
 
-    public Shape(String name) {
-        this.name = name;
+    public Shape() {
     }
 
-    public Shape(String name, Color color) {
-        this.name = name;
+    public Shape(Color color) {
         this.color = color;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    public abstract String getName();
 
     public Color getColor() {
         return color;
@@ -33,13 +23,5 @@ public abstract class Shape {
 
     public void setColor(Color color) {
         this.color = color;
-    }
-
-    public void printName() {
-        System.out.println("Shape name is " + name);
-    }
-
-    public void printShapeColor() {
-        System.out.println("Shape color is " + color.name());
     }
 }

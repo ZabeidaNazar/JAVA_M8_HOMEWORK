@@ -11,7 +11,6 @@ public class RegularPentagon extends Shape implements HasPerimeter, HasSymbol {
     public int side;
 
     public RegularPentagon(int side) {
-        super(name);
         if (side == 0) {
             throw new IllegalArgumentException(String.format("П'ятикутника зі сторонами %s не існує!", side));
         }
@@ -31,5 +30,10 @@ public class RegularPentagon extends Shape implements HasPerimeter, HasSymbol {
     @Override
     public double getPerimeter() {
         return 5 * side;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

@@ -9,7 +9,6 @@ public class Circle extends Shape implements HasPerimeter, HasArea, HasSymbol {
     public int radius;
 
     public Circle(int radius) {
-        super(name);
         if (radius == 0) {
             throw new IllegalArgumentException(String.format("Кола з радіусом %s не існує!", radius));
         }
@@ -34,5 +33,10 @@ public class Circle extends Shape implements HasPerimeter, HasArea, HasSymbol {
     @Override
     public char getSymbol() {
         return symbol;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

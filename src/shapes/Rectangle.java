@@ -10,7 +10,6 @@ public class Rectangle extends Shape implements HasPerimeter, HasArea, HasSymbol
     public int height;
 
     public Rectangle(int width, int height) {
-        super(name);
         if (width == 0 || height == 0) {
             throw new IllegalArgumentException(String.format("Прямокутника з шириною %s і висотою %s не існує!", width, height));
         }
@@ -36,5 +35,10 @@ public class Rectangle extends Shape implements HasPerimeter, HasArea, HasSymbol
     @Override
     public double getPerimeter() {
         return 2 * (width + height);
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

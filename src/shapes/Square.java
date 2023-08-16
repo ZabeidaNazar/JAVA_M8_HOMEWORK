@@ -9,7 +9,6 @@ public class Square extends Shape implements HasPerimeter, HasArea, HasSymbol {
     public int side;
 
     public Square(int side) {
-        super(name);
         if (side == 0) {
             throw new IllegalArgumentException(String.format("Квадрата зі стороною %s не існує!", side));
         }
@@ -34,5 +33,10 @@ public class Square extends Shape implements HasPerimeter, HasArea, HasSymbol {
     @Override
     public double getPerimeter() {
         return 4 * side;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }
